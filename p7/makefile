@@ -1,3 +1,4 @@
+TARGET = mystring
 GCC = gcc
 CFLAGS = -g -Wall -Wshadow -fprofile-arcs -ftest-coverage
 OBJS	= mystring.o main.o
@@ -10,9 +11,17 @@ mystring: $(OBJS) $(HDRS)
 	$(GCC) $(CFLAGS) -c $*.c
 
 clean:
-	rm -f mystring $(OBJS) out_*
+	rm -f $(TARGET) $(OBJS) out_*
 
 test0:
 	./mystring strlen input out_len
-	diff -q out_len expected_strlen
+	diff  out_len expected_strlen
+
+test1:
+	./$(TARGET) countchar input out_countchar
+	diff out_countchar expect_countchar
+
+test2:
+	./$(TARGET) strupper input out_upper
+	diff out_upper expect_upper
 

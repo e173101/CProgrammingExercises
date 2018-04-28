@@ -60,6 +60,21 @@ int main(int argc, char** argv)
 	if(strcmp(argv[1], "strlen") == 0)
 		for(int i =0 ; i<num_lines; i++)
 			fprintf(outfptr, "length: %d\n", my_strlen(lines[i]));
+	if(strcmp(argv[1], "countchar") == 0)
+		for (int i = 0; i<num_lines; i++)
+			fprintf(outfptr, "count(%c): %d\n", lines[i][0],\
+					my_countchar(lines[i], lines[i][0]));
+	if(strcmp(argv[1], "strupper") == 0)
+		for (int i =0; i<num_lines; i++)
+		{
+			my_strupper(lines[i]);
+			fprintf(outfptr, "%s", lines[i]);
+		}
+	
+	for (int i = 0; i<num_lines;i++)
+		free(lines[i]);
+	free(lines);
+	fclose(outfptr);
 	return EXIT_SUCCESS;
 }
 

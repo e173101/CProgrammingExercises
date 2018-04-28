@@ -12,7 +12,7 @@ int my_countchar(const char* str, char c);
 //make all char in string become upper char, return the number char have been chahged
 //e.g.
 //my_strupper("asdD"); str-> ASDD, return 3;
-int my_strupper(char* str);
+void my_strupper(char* str);
 
 //same as strchr
 char * my_strchr(const char * str, char ch);

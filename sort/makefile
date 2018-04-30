@@ -36,5 +36,9 @@ inputgen: testgen
 	sort -n input100 > expected100
 
 clean:
+<<<<<<< HEAD
 	rm testgen input* expected* temp* output* *.o
+=======
+	rm testgen input* expected* temp* output*
+>>>>>>> 3e0caaf556fe9e3339b596dd0a2aac8d5af21d9d
 

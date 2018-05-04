@@ -12,6 +12,14 @@ ball3: ball3.c
 oneway: oneway.c
 	gcc $(CFLAG) oneway.c -o $@
 
+hanoi: hanoi.c
+	gcc $(CFLAG) hanoi.c -o $@
+
+partition: partition.c
+	gcc $(CFLAG) partition.c -o $@
+
+partition1: partition1.c
+	gcc $(CFLAG) partition1.c -o $@
 clean:
-	rm ball1 ball2 ball3 oneway
+	rm ball1 ball2 ball3 oneway hanio partition
 

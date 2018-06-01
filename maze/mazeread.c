@@ -75,6 +75,7 @@ Maze * Maze_construct(char * fileName)
 	{
 		col = 0;
 		do {
+			ch = fgetc(fptr);
 
 
 int main(int argc, char *argv[])
